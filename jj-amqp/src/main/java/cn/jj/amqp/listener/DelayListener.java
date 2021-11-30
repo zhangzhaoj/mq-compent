@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
 /**
  * @author by wanghui03
  * @Classname DelayListener
- * @Description TODO
+ * @Description 延迟队列监听
  * @Date 2021/11/30 11:11
  */
 @Component
-/*@MqExtend(description = "延迟队列监听", isRecord = false)
-@RabbitListener(queues = DelayQueueConfig.DELAY_PROCESS_QUEUE)*/
+@MqExtend(description = "延迟队列监听", isRecord = false)
+@RabbitListener(queues = DelayQueueConfig.DELAY_PROCESS_QUEUE)
 public class DelayListener extends AbstractListener<AbstractMessage> {
     @Autowired
     private RabbitTemplate rabbitTemplate;
