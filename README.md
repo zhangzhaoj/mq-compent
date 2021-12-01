@@ -24,6 +24,7 @@
 2. topic：RoutingKey与Binding需要模糊匹配;*：匹配一个单词，#用友匹配多规格单词
 3. fanout：把所有发送到该交换机的消息路由到所有与该交换机绑定的队列中
 4. headers
+
 ![img.png](img/AMQP生产者流转过程.png)
 ![img.png](img/AMQP消费者流转过程.png)
 * 备份交换机
@@ -42,6 +43,7 @@
 * 如果消息本身单独设置的话，不会马上抹掉，而是在消费即将投递到消费者之前判断。因为如果要抹掉的话需要遍历整个队列
 * 设置队列的TTL：channel.queueDeclare加入x-expires参数
 * 死信交换机DLX
+
 ![img.png](img/死信队列.png)
 ### 延迟队列
 RabbitMQ本身没有直接支持延迟队列，但是可以通过TTL和DLX模拟延迟队列功能
