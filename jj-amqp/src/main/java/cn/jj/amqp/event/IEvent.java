@@ -3,7 +3,7 @@ package cn.jj.amqp.event;
 /**
  * @author by wanghui03
  * @Classname IEvent
- * @Description TODO
+ * @Description 事件接口
  * @Date 2021/11/30 11:29
  */
 public interface IEvent {

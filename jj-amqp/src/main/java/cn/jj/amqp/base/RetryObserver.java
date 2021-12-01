@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * @author by wanghui03
  * @Classname RetryObserver
- * @Description TODO
+ * @Description 重试
  * @Date 2021/11/30 11:33
  */
 public class RetryObserver extends AbstractObserver<AbstractMessage> implements Amqp<AbstractMessage> {

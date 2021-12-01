@@ -16,7 +16,7 @@
 * 设置用户权限：rabbitmqctl [--node <node>] [--longnames] [--quiet] set_permissions [--vhost <vhost>] <username> <conf> <write> <read>
 * *命令帮助：rabbitmqctl help
 ###消息队列远转过程
-![img.png](消息队列远转过程.png)
+![img.png](img/消息队列远转过程.png)
 * RoutingKey：路由键，生产者将消息发送给交换机的时候，一般会指定一个路由键，用来指定这个消息的路由规则，而RoutingKey需要与交换机类型、BindingKey联合使用才能最终生效。
 * Binding：绑定。RabbitMQ中通过绑定将交换机与队列关联起来，在绑定时一般会指定一个绑定键（BindingKey）
 * 交换机类型： 
@@ -24,8 +24,8 @@
 2. topic：RoutingKey与Binding需要模糊匹配;*：匹配一个单词，#用友匹配多规格单词
 3. fanout：把所有发送到该交换机的消息路由到所有与该交换机绑定的队列中
 4. headers
-![img.png](AMQP生产者流转过程.png)
-![img.png](AMQP消费者流转过程.png)
+![img.png](img/AMQP生产者流转过程.png)
+![img.png](img/AMQP消费者流转过程.png)
 * 备份交换机
 1. 如果设置的备份交换机不存在，客户端和RabbitMQ服务端都不会有异常，此时消息会丢失。
 2. 如果备份交换机没有绑定任何队列，客户端和RabbitMQ服务端都不会有异常，此时消息会丢失。
@@ -42,10 +42,10 @@
 * 如果消息本身单独设置的话，不会马上抹掉，而是在消费即将投递到消费者之前判断。因为如果要抹掉的话需要遍历整个队列
 * 设置队列的TTL：channel.queueDeclare加入x-expires参数
 * 死信交换机DLX
-![img.png](死信队列.png)
+![img.png](img/死信队列.png)
 ###延迟队列
 RabbitMQ本身没有直接支持延迟队列，但是可以通过TTL和DLX模拟延迟队列功能
-![img.png](延迟队列.png)
+![img.png](img/延迟队列.png)
 ###优先级队列
 可以通过设置队列的x-max-priority参数来设置优先级
 ###RPC

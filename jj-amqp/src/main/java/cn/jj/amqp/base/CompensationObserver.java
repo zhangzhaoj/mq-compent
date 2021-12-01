@@ -8,7 +8,7 @@ import com.sun.deploy.appcontext.AppContext;
 /**
  * @author by wanghui03
  * @Classname CompensationObserver
- * @Description TODO
+ * @Description 记录需要补偿的消息
  * @Date 2021/11/30 11:33
  */
 public class CompensationObserver extends AbstractObserver<AbstractMessage> implements Amqp<AbstractMessage> {
@@ -33,8 +33,9 @@ public class CompensationObserver extends AbstractObserver<AbstractMessage> impl
     @Override
     public void save(AbstractMessage message) {
         try {
-            logger.info("队列:{},记录消息:{}",this.condition.getQueueName(), message);
 
+            logger.info("队列:{},记录消息:{}",this.condition.getQueueName(), message);
+            //todo 持久化
         } catch (Exception ex) {
             logger.error("队列:{}, 日志记录失败, 原因:{}, messageId:{}, stack:{}", this.condition.getQueueName(), ex.getMessage(), message.getMessageId(), ex);
         }

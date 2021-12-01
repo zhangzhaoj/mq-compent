@@ -46,10 +46,6 @@ public abstract class AbstractListener<M extends AbstractMessage> {
      */
     protected String messageId;
 
-    /**
-     * 上下文用户是否有效
-     */
-    protected boolean userOnline;
 
     /**
      * 监听消息

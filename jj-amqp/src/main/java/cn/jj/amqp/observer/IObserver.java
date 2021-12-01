@@ -6,7 +6,7 @@ import cn.jj.amqp.event.IEvent;
 /**
  * @author by wanghui03
  * @Classname IObserver
- * @Description TODO
+ * @Description 观察者接口
  * @Date 2021/11/30 11:29
  */
 public interface IObserver<T> extends IEvent {

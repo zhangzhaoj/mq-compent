@@ -1,7 +1,6 @@
 package cn.jj.amqp.message;
 
 import cn.jj.amqp.common.CommonResponse;
-import cn.jj.amqp.config.DelayQueueConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;

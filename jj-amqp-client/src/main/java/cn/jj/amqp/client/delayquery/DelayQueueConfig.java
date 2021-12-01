@@ -1,4 +1,4 @@
-package cn.jj.amqp.config;
+package cn.jj.amqp.client.delayquery;
 
 import cn.jj.amqp.message.MqMessage;
 import org.springframework.amqp.core.*;

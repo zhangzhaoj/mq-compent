@@ -1,7 +1,6 @@
 package cn.jj.amqp.message;
 
 import cn.jj.amqp.common.KeyValue;
-import cn.jj.amqp.handler.DelayDiscardHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.util.Assert;
@@ -41,10 +40,6 @@ public abstract class AbstractMessage implements MqMessage {
      * 延时时间单位
      */
     private TimeUnit timeUnit;
-    /**
-     * 延时超时丢弃处理器(delayDiscard=true时有效)
-     */
-    private DelayDiscardHandler delayDiscardHandler;
     /**
      * 失败后重试记录
      */

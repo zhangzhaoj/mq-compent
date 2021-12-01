@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author by wanghui03
- * @Classname MessageResponse
+ * @Classname MessageSend
  * @Description
  * @Date 2021/11/30 10:00
  */

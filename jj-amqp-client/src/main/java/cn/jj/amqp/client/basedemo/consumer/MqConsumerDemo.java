@@ -1,4 +1,4 @@
-package cn.jj.amqp.client.consumer;
+package cn.jj.amqp.client.basedemo.consumer;
 
 import cn.jj.amqp.message.MqMessage;
 import cn.jj.amqp.client.message.MqMessageDemo;
@@ -20,7 +20,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableConfigurationProperties(RabbitProperties.class)
-//@ConditionalOnProperty(name = "jj.amqp.consumer.enabled",havingValue = "true")
 @ComponentScan(basePackages = "cn.jj.amqp.client.listener")
 public class MqConsumerDemo {
 
