@@ -1,13 +1,13 @@
 # mq-compent
 
 ## 项目介绍
-###目的
+### 目的
 封装rabbitmq，降低消息发送和消费业务代码量
-###调试方法：
+### 调试方法：
 启动MqClientApplication，执行MqSendDemoTest即可查看消息的发送及消费（启动和发送没有先后顺序）
 
 ## RabbitMQ
-###常用指令
+### 常用指令
 * 启动：rabbitmqctl -server -detached
 * 查看是否启动成功： rabbitmqctl status
 * 查看集群信息：rabbitmqctl cluster_status
@@ -15,7 +15,7 @@
 * 设置用户所有权限：rabbitmqctl set_permissions -p/username ". *" ". *" ". *"   
 * 设置用户权限：rabbitmqctl [--node <node>] [--longnames] [--quiet] set_permissions [--vhost <vhost>] <username> <conf> <write> <read>
 * *命令帮助：rabbitmqctl help
-###消息队列远转过程
+### 消息队列远转过程
 ![img.png](img/消息队列远转过程.png)
 * RoutingKey：路由键，生产者将消息发送给交换机的时候，一般会指定一个路由键，用来指定这个消息的路由规则，而RoutingKey需要与交换机类型、BindingKey联合使用才能最终生效。
 * Binding：绑定。RabbitMQ中通过绑定将交换机与队列关联起来，在绑定时一般会指定一个绑定键（BindingKey）
@@ -32,7 +32,7 @@
 3. 如果备份交换机没有任何匹配的队列，客户端和RabbitMQ服务端都不会有异常，此时消息会丢失。
 4. 如果本分交换机和mandatory参数一起使用，mandatory参数无效。
 5. 实际应用中建议使用TTL和DLX代替immediate参数。
-###过期时间TTL
+### 过期时间TTL
 * 设置消息方式：
 1. 队列属性设置，所有消息有相同的过期时间；channel.queueDeclare加入x-message-ttl参数，单位毫秒
 2. 消息本身单独设置，每个消息有自己的过期时间；
@@ -43,9 +43,9 @@
 * 设置队列的TTL：channel.queueDeclare加入x-expires参数
 * 死信交换机DLX
 ![img.png](img/死信队列.png)
-###延迟队列
+### 延迟队列
 RabbitMQ本身没有直接支持延迟队列，但是可以通过TTL和DLX模拟延迟队列功能
 ![img.png](img/延迟队列.png)
-###优先级队列
+### 优先级队列
 可以通过设置队列的x-max-priority参数来设置优先级
-###RPC
+### RPC
