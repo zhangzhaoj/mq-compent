@@ -1,9 +1,9 @@
 package cn.jj.amqp.client.send;
 
-import cn.jj.amqp.message.AbstractMessage;
-import cn.jj.amqp.message.MessageSender;
 import cn.jj.amqp.client.message.MessageBodyDemo;
 import cn.jj.amqp.client.message.MqMessageDemo;
+import cn.jj.amqp.message.AbstractMessage;
+import cn.jj.amqp.message.MessageSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

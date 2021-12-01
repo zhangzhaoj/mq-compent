@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>jj-amqp-message</artifactId>
+            <artifactId>jj-amqp</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

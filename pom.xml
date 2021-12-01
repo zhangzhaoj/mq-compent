@@ -5,7 +5,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>jj-amqp</module>
-		<module>jj-amqp-message</module>
 		<module>jj-amqp-client</module>
 	</modules>
 	<parent>
