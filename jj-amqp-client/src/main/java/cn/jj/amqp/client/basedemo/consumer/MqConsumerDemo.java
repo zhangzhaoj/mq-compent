@@ -1,7 +1,7 @@
 package cn.jj.amqp.client.basedemo.consumer;
 
 import cn.jj.amqp.message.MqMessage;
-import cn.jj.amqp.client.message.MqMessageDemo;
+import cn.jj.amqp.client.basedemo.message.MqMessageDemo;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
