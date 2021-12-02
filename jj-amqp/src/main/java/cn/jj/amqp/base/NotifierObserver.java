@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 /**
  * @author by wanghui03
  * @Classname NotifierObserver
- * @Description 通知时间，当消息发生异常等情况时发送邮件提醒相关人员
+ * @Description 通知事件，当消息发生异常等情况时发送邮件提醒相关人员
  * @Date 2021/11/30 11:33
  */
 public class NotifierObserver extends AbstractObserver<AbstractMessage> implements Amqp<AbstractMessage> {

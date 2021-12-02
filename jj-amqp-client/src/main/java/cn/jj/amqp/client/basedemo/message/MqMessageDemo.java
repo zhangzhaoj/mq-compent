@@ -4,7 +4,6 @@ import cn.jj.amqp.message.AbstractMessage;
 import cn.jj.amqp.message.MessageContext;
 import cn.jj.amqp.message.MessageMode;
 import cn.jj.amqp.message.MqMessage;
-import cn.jj.amqp.client.basedemo.message.MessageBodyDemo;
 
 /**
  * @author by wanghui03
